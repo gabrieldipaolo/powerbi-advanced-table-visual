@@ -1,0 +1,22 @@
+{
+  "visual": {
+    "name": "MyCustomTable",
+    "displayName": "Tabla Personalizada",
+    "guid": "MyCustomTable12345",
+    "visualClassName": "Visual",
+    "version": "1.1.0.0",
+    "description": "Tabla personalizada con opciones avanzadas de alineación y colores",
+    "supportUrl": "https://github.com/gabrieldipaolo",
+    "gitHubUrl": "https://github.com/gabrieldipaolo"
+  },
+  "apiVersion": "5.3.0",
+  "author": {
+    "name": "Gabriel DiPaolo",
+    "email": "gabriel@ejemplo.com"
+  },
+  "assets": {
+    "icon": "assets/icon.png"
+  },
+  "style": "style/visual.less",
+  "capabilities": "capabilities.json"
+}

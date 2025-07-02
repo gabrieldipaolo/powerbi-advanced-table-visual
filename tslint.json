@@ -1,0 +1,21 @@
+{
+  "extends": [],
+  "rules": {
+    "no-console": false,
+    "no-var-requires": false,
+    "quotemark": false,
+    "semicolon": false,
+    "trailing-comma": false,
+    "no-unused-expression": false,
+    "no-string-literal": false,
+    "prefer-const": false,
+    "no-debugger": false,
+    "max-line-length": false,
+    "object-literal-sort-keys": false,
+    "no-empty": false,
+    "variable-name": false,
+    "typedef-whitespace": false,
+    "whitespace": false,
+    "no-consecutive-blank-lines": false
+  }
+}

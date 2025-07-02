@@ -1,0 +1,241 @@
+{
+  "dataRoles": [
+    {
+      "displayName": "Columnas",
+      "name": "columns",
+      "kind": "GroupingOrMeasure",
+      "description": "Agrupaciones, campos y atributos"
+    },
+    {
+      "displayName": "Valores",
+      "name": "values",
+      "kind": "GroupingOrMeasure",
+      "description": "Métricas, imágenes, SVGs, valores, minigráficos"
+    },
+    {
+      "displayName": "Contenido Dinámico",
+      "name": "dynamicContent",
+      "kind": "GroupingOrMeasure",
+      "description": "Campos que se adaptan automáticamente (Status, imágenes, iconos, minigráficos)"
+    }
+  ],
+  "dataViewMappings": [
+    {
+      "conditions": [
+        {
+          "columns": { "min": 0, "max": 50 },
+          "values": { "min": 0, "max": 50 },
+          "dynamicContent": { "min": 0, "max": 50 }
+        }
+      ],
+      "table": {
+        "rows": {
+          "select": [
+            { "for": { "in": "columns" } },
+            { "for": { "in": "values" } },
+            { "for": { "in": "dynamicContent" } }
+          ],
+          "dataReductionAlgorithm": {
+            "bottom": {
+              "count": 50000
+            }
+          }
+        }
+      }
+    }
+  ],
+  "supportsHighlight": false,
+  "supportsKeyboardFocus": true,
+  "supportsLandingPage": false,
+  "objects": {
+    "rowFormatting": {
+      "displayName": "Formato de filas",
+      "properties": {
+        "evenRowBgColor": {
+          "displayName": "Color fila par",
+          "type": { "fill": { "solid": { "color": true } } }
+        },
+        "oddRowBgColor": {
+          "displayName": "Color fila impar",
+          "type": { "fill": { "solid": { "color": true } } }
+        }
+      }
+    },
+    "columnFormatting": {
+      "displayName": "Alineación columnas",
+      "properties": {
+        "alignHorizontal": {
+          "displayName": "Alineación horizontal",
+          "type": {
+            "enumeration": [
+              { "value": "left", "displayName": "Izquierda" },
+              { "value": "center", "displayName": "Centro" },
+              { "value": "right", "displayName": "Derecha" }
+            ]
+          }
+        },
+        "alignVertical": {
+          "displayName": "Alineación vertical",
+          "type": {
+            "enumeration": [
+              { "value": "top", "displayName": "Arriba" },
+              { "value": "middle", "displayName": "Centro" },
+              { "value": "bottom", "displayName": "Abajo" }
+            ]
+          }
+        }
+      }
+    },
+    "headerFormatting": {
+      "displayName": "Formato encabezado",
+      "properties": {
+        "headerBgColor": {
+          "displayName": "Color fondo encabezado",
+          "type": { "fill": { "solid": { "color": true } } }
+        },
+        "headerFontColor": {
+          "displayName": "Color texto encabezado",
+          "type": { "fill": { "solid": { "color": true } } }
+        },
+        "headerAlign": {
+          "displayName": "Alineación encabezado",
+          "type": {
+            "enumeration": [
+              { "value": "left", "displayName": "Izquierda" },
+              { "value": "center", "displayName": "Centro" },
+              { "value": "right", "displayName": "Derecha" }
+            ]
+          }
+        }
+      }
+    },
+    "cellFormatting": {
+      "displayName": "Formato de celdas",
+      "properties": {
+        "fontFamily": {
+          "displayName": "Familia de fuente",
+          "type": {
+            "enumeration": [
+              { "value": "Segoe UI, Arial, sans-serif", "displayName": "Segoe UI" },
+              { "value": "Arial, sans-serif", "displayName": "Arial" },
+              { "value": "Times New Roman, serif", "displayName": "Times New Roman" },
+              { "value": "Courier New, monospace", "displayName": "Courier New" },
+              { "value": "Verdana, sans-serif", "displayName": "Verdana" }
+            ]
+          }
+        },
+        "fontSize": {
+          "displayName": "Tamaño de fuente",
+          "type": { "numeric": true }
+        }
+      }
+    },
+    "sombra": {
+      "displayName": "Efectos de sombra",
+      "properties": {
+        "enableShadow": {
+          "displayName": "Habilitar sombra",
+          "type": { "bool": true }
+        }
+      }
+    },
+    "stylePreset": {
+      "displayName": "Estilo preestablecido",
+      "properties": {
+        "preset": {
+          "displayName": "Preset",
+          "type": {
+            "enumeration": [
+              { "value": "PowerBI", "displayName": "Power BI" },
+              { "value": "claro", "displayName": "Claro" },
+              { "value": "oscuro", "displayName": "Oscuro" },
+              { "value": "minimalista", "displayName": "Minimalista" }
+            ]
+          }
+        }
+      }
+    },
+    "title": {
+      "displayName": "Título",
+      "properties": {
+        "show": { 
+          "displayName": "Mostrar", 
+          "type": { "bool": true } 
+        },
+        "titleText": { 
+          "displayName": "Texto", 
+          "type": { "text": true } 
+        },
+        "fontColor": { 
+          "displayName": "Color", 
+          "type": { "fill": { "solid": { "color": true } } } 
+        },
+        "fontSize": { 
+          "displayName": "Tamaño", 
+          "type": { "numeric": true } 
+        }
+      }
+    },
+    "minicharts": {
+      "displayName": "Minigráficos",
+      "properties": {
+        "donutSize": {
+          "displayName": "Tamaño donuts",
+          "type": { "numeric": true }
+        },
+        "daxSvgSize": {
+          "displayName": "Tamaño SVGs de DAX",
+          "type": { "numeric": true }
+        },
+        "donutColor": {
+          "displayName": "Color donuts",
+          "type": { "fill": { "solid": { "color": true } } }
+        },
+        "sparklineColor": {
+          "displayName": "Color sparklines",
+          "type": { "fill": { "solid": { "color": true } } }
+        },
+        "autoDetectStatus": {
+          "displayName": "Auto-detectar Status",
+          "type": { "bool": true }
+        },
+        "autoDetectPercentages": {
+          "displayName": "Auto-detectar Porcentajes",
+          "type": { "bool": true }
+        }
+      }
+    },
+    "tableSettings": {
+      "displayName": "Configuración de tabla",
+      "properties": {
+        "enableScroll": {
+          "displayName": "Habilitar scroll",
+          "type": { "bool": true }
+        },
+        "headerSticky": {
+          "displayName": "Encabezados fijos",
+          "type": { "bool": true }
+        },
+        "maxColumnWidth": {
+          "displayName": "Ancho máximo columna (px)",
+          "type": { "numeric": true }
+        },
+        "minColumnWidth": {
+          "displayName": "Ancho mínimo columna (px)",
+          "type": { "numeric": true }
+        }
+      }
+    }
+  },
+  "sorting": {
+    "implicit": {
+      "clauses": [
+        {
+          "role": "columns",
+          "direction": 1
+        }
+      ]
+    }
+  },
+  "privileges": []
+}
