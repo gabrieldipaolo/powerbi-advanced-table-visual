@@ -10,7 +10,7 @@
 ## Quick Installation
 
 ### Download and Import
-1. **[Download MiTabla.pbiviz](https://github.com/yourusername/powerbi-custom-table/releases/latest/download/MiTabla.pbiviz)**
+1. **[Download MiTabla.pbiviz](https://github.com/gabrieldipaolo/powerbi-advanced-table-visual/tree/main/power-bi-custom-table/releases/latest/download)**
 2. Open Power BI Desktop or Service
 3. Navigate to Visualizations pane → "..." → "Import visual from file"
 4. Select the downloaded file
@@ -19,7 +19,7 @@
 ### Alternative Installation
 ```bash
 # Download latest release
-curl -L -o MiTabla.pbiviz https://github.com/yourusername/powerbi-custom-table/releases/latest/download/MiTabla.pbiviz
+curl -L -o MiTabla.pbiviz https://github.com/gabrieldipaolo/powerbi-advanced-table-visual/tree/main/power-bi-custom-table/releases/latest/download
 ```
 
 ---
